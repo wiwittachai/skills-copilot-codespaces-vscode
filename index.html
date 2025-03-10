@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานะเตียง</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bffaff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #bedStatus {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .bedCard {
+            background-color: #aeea92;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .bedImage {
+            width: 100%;
+            height: 150px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .bedImage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+        .available {
+            color: #4CAF50;
+        }
+
+        .occupied {
+            color: #f44336;
+        }
+
+        .loading {
+            font-size: 20px;
+            color: #888;
+        }
+
+        .footer-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .footer-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function fetchBedStatus() {
+            fetch('get_beds.php')
+                .then(response => response.json())
+                .then(data => {
+                    let bedList = document.getElementById("bedStatus");
+                    bedList.innerHTML = "";
+                    data.forEach(bed => {
+                        let statusText = bed.status === "available" ? "🟢 ว่าง" : "🔴 ไม่ว่าง";
+                        let statusClass = bed.status === "available" ? "available" : "occupied";
+                        let bedImage = bed.image || 'https://image.makewebcdn.com/makeweb/m_1920x0/Pw2uOe4FD/DefaultData/y6ukmk.png?v=202405291424'; // กำหนดรูปภาพ placeholder ถ้าไม่มีรูป
+
+                        bedList.innerHTML += `
+                            <div class="bedCard">
+                                <div class="bedImage">
+                                    <img src="${bedImage}" alt="Bed Image">
+                                </div>
+                                <p class="${statusClass}">เตียง ${bed.id}: ${statusText}</p>
+                            </div>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        setInterval(fetchBedStatus, 3000); // รีเฟรชข้อมูลทุก 3 วินาที
+        window.onload = fetchBedStatus;
+    </script>
+</head>
+<body>
+    <h2>สถานะเตียงห้องพยาบาล
+    </h2>
+    <div id="bedStatus" class="loading">กำลังโหลด...</div>
+
+    <a href="user.php" class="footer-button">กลับหน้าหลัก</a>
+</body>
+</html>

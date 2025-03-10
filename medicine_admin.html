@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลังยาห้องพยาบาลโรงเรียนขาณุวิทยา</title>
+    <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                }
+                header {
+                    background-color: #4CAF50;
+                    color: white;
+                    text-align: center;
+                    padding: 15px 0;
+                }
+                .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding: 20px;
+                }
+                .medicine-card {
+                    background-color: rgb(222, 248, 204);
+                    border: 1px solid #8bb472;
+                    border-radius: 8px;
+                    width: 250px;
+                    margin: 15px;
+                    padding: 20px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                }
+                .medicine-card img {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+                .medicine-card h3 {
+                    color: #4CAF50;
+                }
+                .medicine-card p {
+                    font-size: 14px;
+                    color: #333;
+                }
+                .medicine-card .properties {
+                    margin-top: 15px;
+                    text-align: left;
+                }
+                .properties li {
+                    font-size: 14px;
+                    line-height: 1.6;
+                }
+                footer {
+                    background-color: #333;
+                    color: white;
+                    text-align: center;
+                    padding: 10px 0;
+                    position: fixed;
+                    width: 100%;
+                    bottom: 0;
+                }
+
+
+
+                body {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100vh;
+                }
+                .footer {
+                    margin-top: auto;
+                    text-align: center;
+                    padding: 20px;
+                }
+                .footer-button {
+                    display: inline-block;
+                    width: 130px;
+                    height: 50px;
+                    padding: 12px 1px;
+                    border: 2px solid #5e0000;
+                    border-radius: 16px;
+                    background-color: rgb(158, 172, 250);
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                    transition: background 0.3s ease;
+                }
+            
+
+                .page-wrapper {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* ทำให้เนื้อหาเต็มจอ */
+                }
+
+                .search-box {
+                width: 80%;  /* เพิ่มความกว้างของช่องค้นหา */
+                padding: 15px; /* เพิ่มระยะห่างภายในช่องค้นหา */
+                font-size: 20px; /* เพิ่มขนาดฟอนต์ให้ใหญ่ขึ้น */
+                border-radius: 25px; /* ปรับมุมของช่องค้นหา */
+                border: 1px solid #000000; /* กำหนดสีเส้นขอบ */
+                box-sizing: border-box; /* คำนวณขนาดรวมเส้นขอบ */
+                outline: none; /* ลบเส้นขอบเมื่อช่องค้นหาถูกคลิก */
+                transition: all 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวล */
+                }
+
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <h1>ยารักษาโรคต่างๆที่มีในห้องพยาบาล</h1>
+    </header>
+        <br>
+        <div class="search-container">
+            <Center><input type="text" id="search" class="search-box" placeholder="ค้นหาอาการ..." onkeyup="searchMedicine()"></Center>
+        </div>
+
+
+
+    <div class="container">
+        <!-- การ์ดยา 1 -->
+        <div class="medicine-card">
+            <img src="https://scontent.fphs4-1.fna.fbcdn.net/v/t1.15752-9/481165665_601028976243715_2492892861188481068_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=wVVQusT7qCYQ7kNvgGnGpBU&_nc_oc=Adg4cAZRfjayV2SJhbTE8pxyw3LE13ivBrb4LzLgKYpmYRlXyB5Br0sGisGkrUZcbjE&_nc_zt=23&_nc_ht=scontent.fphs4-1.fna&oh=03_Q7cD1gFFmHw00EWJUJAatqnFfo0q0lAF4XyirCo47Ok-8KJDzg&oe=67EE65A2" alt="ยารักษาโรค 1">
+            <h3> Cemol ยาพาราเซตามอล</h3>
+            <p><h2>ยาใช้ภายใน</h2></p>
+            <p>สรรพคุณ: ใช้บรรเทาอาการปวดทั่วไป เช่น ปวดหัว ปวดกล้ามเนื้อ และลดไข้</p>
+            <ul class="properties">
+                <li>ขนาดยาที่แนะนำ: 500 มก. ทุก 4-6 ชั่วโมง</li>
+                <li>ข้อควรระวัง: ไม่ควรใช้ร่วมกับแอลกอฮอล์</li>
+                <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+            </ul>
+        </div>
+
+        <!-- การ์ดยา 2 -->
+        <div class="medicine-card">
+            <img src="https://www.pobpad.com/wp-content/uploads/2024/05/May-24-04-05.jpg" alt="ยารักษาโรค 2">
+            <br>
+            <h3>เมเฟนามิค</h3>
+            <p><h2>ยาใช้ภายใน</h2></p>
+            <p>สรรพคุณ: ใช้บรรเทาอาการปวด บวม อักเสบ ลดไข้</p>
+            <ul class="properties">
+                <li>ขนาดยาที่แนะนำ: 500 มก. ทุก 6 ชั่วโมง</li>
+                <li>ข้อควรระวัง: ใช้ในผู้ที่แพ้ยาบางชนิด</li>
+                <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+            </ul>
+        </div>
+
+        <!-- การ์ดยา 3 -->
+        <div class="medicine-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCFhI9jUmFGZDooXyo6m4aHK2kSGVO1-5TSQ&s" alt="ยารักษาโรค 3">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>Burajel A.M</h3>
+            <p><h2>ยาใช้ภายใน</h2></p>
+            <p>สรรพคุณ: ใช้รักษาอาการที่เกิดจากกรดในกระเพาะอาหารมากเกินไป อาการแสบยอดอก</p>
+            <ul class="properties">
+                <li>ขนาดยาที่แนะนำ: กินหลังอาหาร 1 ชั่วโมง วันละ 3-4 ครั้ง หรือเมื่อมีอาการและซ้ำได้ทุก 2-4 ชั่วโมง</li>
+                <li>ข้อควรระวัง: ระวังการใช้ในหญิงตั้งครรภ์ หรือหญิงที่อยู่ในภาวะให้นมบุตร ระวังการใช้ในผุ้ป่วยด้วย โรคไต</li>
+                <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+            </ul>
+        </div>
+
+        <!-- การ์ดยา 4 -->
+        <div class="medicine-card">
+            <img src="https://www.medicaya.com/upload/product/img1_01042022-042517.jpeg" alt="ยารักษาโรค 4">
+            <br>
+            <br>
+            <h3>NEOXEN</h3>
+            <p><h2>ยาใช้ภายใน</h2></p>
+            <p>สรรพคุณ: ใช้บรรเทาอาการปวดจากการ อักเสบบริเวณข้อ กระดูก และกล้ามเนื้อชนิดเฉียบพลัน เช่น ข้อเคล็ดจากการเล่นกีฬา อาการปวดหลังจากการ ได้รับบาดเจ็บ และอาการอักเสบ ของเอ็นและกล้ามเนื้อ</p>
+            <ul class="properties">
+                <li>ขนาดยาที่แนะนำ: 500 มิลลิกรัมแล้วตามด้วย 250 มิลลิกรัม ทุก 6-8 ชั่วโมง</li>
+                <li>ข้อควรระวัง: หลีกเลี่ยงการใช้เกินขนาดที่แนะนำ</li>
+                <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+            </ul>
+        </div>
+            <!-- การ์ดยา 5 -->
+            <div class="medicine-card">
+                <img src="https://assets.parenttown.com/product_affiliate/products/13106548991674808819.jpg" alt="ยารักษาโรค 5">
+                <br>
+                <br>
+                <h3>Osra R.O. ผงเกลือแร่ขาว</h3>
+                <p><h2>ยาใช้ภายใน</h2></p>
+                <p>สรรพคุณ: ดื่มทดแทนการเสียน้ำในรายที่มีอาการท้องร่วงหรือในรายที่มีอาเจียนมากๆ และป้องกันการช็อค</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: ผสม 1 ซองกับน้ำ 1 แก้ว ดื่มตามอาการ</li>
+                    <li>ข้อควรระวัง: ห้ามใช้กับผู้ที่มีภาวะไตวาย</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 6 -->
+            <div class="medicine-card">
+                <img src="https://assets.tops.co.th/ALSOFF-AlsoffAlcohol70percent450ml-8853042000536-2 " alt="ยารักษาโรค 6" >
+                <h3>ALCOHOL ALSOFF แอลกอฮอล์ แอลซอฟฟ์ 450 มล.</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: ใช้สำหรับฆ่าเชื้อโรค ทำความสะอาดผิวหนังและบาดแผล </p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: เลือกแอลกอฮอล์ให้เหมาะสม</li>
+                    <li>ข้อควรระวัง:  ห้ามเทแอลกอฮอล์ลงบนแผลโดยตรง</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 7 -->
+            <div class="medicine-card">
+                <img src="https://www.medsupply.co/wp-content/uploads/2019/01/conforming2.png" alt="ยารักษาโรค 7">
+                <br>
+                <br>
+                <br>
+                <h3>conforming bandage ผ้ายืดพันแผล</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: ใช้พันแผลได้ทุกส่วน โดยเฉพาะบริเวณข้อต่อ ข้อพับต่างๆ และตามส่วนโค้งของร่างกาย เช่น ศีรษะ ข้อศอก และข้อเข่า</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: เลือกผ้าพันแผลให้เหมาะกับแผล</li>
+                    <li>ข้อควรระวัง: อย่าพันแน่นเกินไป</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 8 -->
+            <div class="medicine-card">
+                <img src="https://911drugstore.com/wp-content/uploads/2023/02/tigerplast-premium-xl-in1.jpg" alt="ยารักษาโรค 8">
+                <h3>Tigerplast (ไทเกอร์พล๊าส) พลาสเตอร์ปิดแผล ชนิดผ้ายืด</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: พลาสเตอร์นี้หมาะสำหรับปิดบาดแผลเพื่อป้องกันเชื่อโรค ก่อนติดพลาสเตอร์ควรทำความสะอาดแผล และผิวหนังให้แห้ง เพื่อความสะอาดควรเปลี่ยนพลาสเตอร์ทุกวัน</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: เลือกพลาสเตอร์ให้เหมาะกับแผล</li>
+                    <li>ข้อควรระวัง: อย่าติดพลาสเตอร์บนแผลที่เปียกชื้</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 9 -->
+            <div class="medicine-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxe97crJ8G76cssFTD-Im3iwFBWXvlcfVIqQ&s" alt="ยารักษาโรค 9">
+                <br>
+                <br>
+                <h3>Klean & Kare Normal Saline</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: เหมาะสำหรับใช้สวนล้าง ชะล้างและทำความสะอาดทั่วไปทุกประเภทที่ใช้น้ำเกลือได้ ล้างโพรงจมูกหยอดรูจมูกเด็กทารกและเด็กเล็ก ล้างบาดแผล ไม่แสบแผล</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: เลือกน้ำเกลือที่เหมาะสม</li>
+                    <li>ข้อควรระวัง: ห้ามใช้น้ำเกลือที่เปิดทิ้งไว้นานเกิน 24 ชั่วโมง เพราะอาจปนเปื้อนเชื้อโรค</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 10 -->
+            <div class="medicine-card">
+                <img src="https://itp1.itopfile.com/ImageServer/itp_230820207zuc/0/0/%E0%B9%81%E0%B8%AD%E0%B8%A510z-z199610611215.jpg" alt="ยารักษาโรค 10">
+                <br>
+                <br>
+                <h3>คาลาไมน์ (Calamine Lotion)</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: ช่วยบรรเทาอาการคันหรือระคายเคืองผิวหนัง</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: เขย่าขวดก่อนใช้</li>
+                    <li>ข้อควรระวัง: ห้ามใช้กับ แผลเปิดหรือแผลสด </li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 11 -->
+            <div class="medicine-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQKX3VOZ3rkZKjWMU__kXVRLv75_FoAxqkPA&s" alt="ยารักษาโรค 11">
+                <br>
+                <br>
+                <h3>KELA LOTION คีล่า โลชั่น</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: สรรพคุณ:ใช้รักษาอาการอักเสบ คัน หรืออาการแพ้ของโรคผิวหนัง</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: ล้างมือและทำความสะอาดผิวหนังบริเวณที่ต้องการทา</li>
+                    <li>ข้อควรระวัง: ห้ามใช้กับ แผลเปิด แผลสด แผลติดเชื้อ</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 12 -->
+            <div class="medicine-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIQahvJX_Utvb1Gm780XZCx4HRS3Tz-RXIw&s" alt="ยารักษาโรค 12">
+                <br>
+                <br>
+                <h3>BETADINE เบตาดีน</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: สรรพคุณ: ใช้ทาบริเวณแผลติดเชื้อ แผลไฟไหม้ น้ำร้อนลวก</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: ทำความสะอาดแผล ด้วยน้ำสะอาดหรือน้ำเกลือก่อน</li>
+                    <li>ข้อควรระวัง: ห้ามใช้กับแผลลึก แผลไหม้รุนแรง หรือแผลที่มีหนองเยอะ</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 13 -->
+            <div class="medicine-card">
+                <img src="https://bcosmo.com/wp-content/uploads/2021/05/%E0%B9%81%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%AB%E0%B8%AD%E0%B8%A1-%E0%B8%AA%E0%B8%AB%E0%B8%81%E0%B8%B2%E0%B8%A3-30-ml.-140131-301-600x600.jpg.webp" alt="ยารักษาโรค 13">
+                <h3>แอมโมเนียหอม</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: ใช้สำหรับสูดดม ช่วยอาการเป็นลม หน้ามืด วิงเวียนศีรษะ</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: เปิดฝาแล้วให้สูดดมกลิ่นแอมโมเนียเบาๆ (อย่าให้ใกล้จมูกมากเกินไป)</li>
+                    <li>ข้อควรระวัง: ห้ามสูดดมใกล้ๆ หรือใช้ในปริมาณมาก เพราะอาจทำให้เวียนศีรษะหรือระคายเคือง</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 14 -->
+            <div class="medicine-card">
+                <img src="https://img.priceza.com/img2/314/0785/314-20240306140628-171153353016738695.jpg" alt="ยารักษาโรค 14">
+                <h3>น้ำยาล้างตา OPPLIN </h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ:  สำหรับล้างตา เพื่อบรรเทาอาการละคายเคือง เจ็บตา แสบตาหรือคันตา เนื่องจากสิ่งสกปรก มลภาวะ ฝุ่นควัน</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: ล้างมือให้สะอาดก่อนใช้</li>
+                    <li>ข้อควรระวัง: ห้ามใช้น้ำยาล้างตาร่วมกับผู้อื่น เพื่อลดความเสี่ยงการติดเชื้อ</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+            <!-- การ์ดยา 15 -->
+            <div class="medicine-card">
+                <img src="https://th-test-11.slatic.net/p/251ee709a435181a2083664b70ba142a.jpg" alt="ยารักษาโรค 15">
+                <h3>เคาน์เตอร์เพน คูล Counterpain COOL</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: เจลสูตรเย็น ใช้ทาบรรเทาอาการปวดกล้ามเนื้อเนื่องจากการพลิกหรือเคล็ด การช้ำบวมจากการกระแทกการบาดเจ็บระหว่างออกกำลังกาย</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: บีบยาในปริมาณพอเหมาะ แล้วทาบางๆ บริเวณที่ปวดเมื่อย</li>
+                    <li>ข้อควรระวัง:  ห้ามใช้กับแผลเปิด แผลถลอก หรือบริเวณผิวหนังที่ระคายเคือง</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+            </div>
+              <!-- การ์ดยา 16 -->
+              <div class="medicine-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkkUU8N6lm-Jfu0nzdbQHKzSEv-_LMdqSJ_w&s" alt="ยารักษาโรค 16">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3>เคาน์เตอร์เพน Counterpain</h3>
+                <p><h2>ยาใช้ภายนอก</h2></p>
+                <p>สรรพคุณ: ครีมสูตรร้อน ใช้ทาถูนวด บรรเทาอาการปวดกล้ามเนื้อ</p>
+                <ul class="properties">
+                    <li>ขนาดยาที่แนะนำ: บีบยาในปริมาณพอเหมาะ แล้วทาบางๆ บริเวณที่ปวดเมื่อย</li>
+                    <li>ข้อควรระวัง:  ห้ามใช้กับแผลเปิด แผลถลอก หรือบริเวณผิวหนังที่ระคายเคือง</li>
+                    <li>การเก็บรักษา: เก็บในที่แห้งพ้นแสงแดด</li>
+                </ul>
+    </div> 
+
+
+    <a href="admin.php" class="footer-button"><center>กลับหน้าหลัก</center></a>
+       
+    <script>
+        function searchMedicine() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let cards = document.querySelectorAll('.medicine-card');
+        
+            cards.forEach(card => {
+                let text = card.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+        </script>
+    
+</body>
+</html>
